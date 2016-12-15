@@ -32,6 +32,7 @@ function configure() {
         fi
     
         envsubst < /tmp/broker.xml > $instanceDir/etc/broker.xml
+        sed -i 's/localhost/0.0.0.0/' $instanceDir/etc/bootstrap.xml
     fi
 }
 

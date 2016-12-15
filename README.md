@@ -12,5 +12,11 @@ This repository contains
 ## Build instructions
 
     gradle buildArtemis assemble build distTar downloadArtemis
+    docker build .
 
+## Export/Import of Docker Image
+
+    docker save -o artemis.tar [artemis-image-id]
+    docker load -i artemis.tar
+    docker tag [artemis-image-id] docker.io/enmasseproject/artemis
 
